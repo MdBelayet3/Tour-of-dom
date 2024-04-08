@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Dom journey</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        .foruits-container li{
+           color: maroon;
+        }
+        p{
+            color: brown;
+        }
+        #fruits-title{
+            color: black;
+        }
+        #places-title{
+            color: chartreuse;
+        }
+        .important-places{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My first dom journey</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium pariatur id atque fugit perferendis non eligendi enim minus architecto. Eum, aperiam sequi ipsa nihil dolores eveniet corrupti inventore doloremque labore.</p>
+    </header>
+    <main id="main-container">
+        <section>
+            <h1>For my web development journey</h1>
+        <ul>
+            <li>jalaly set</li>
+            <li>murshidi set</li>
+            <li>hai jalaly</li>
+            <li>dom de re baba</li>
+        </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="color-name some-color match color">Fruits i like it</h1>
+            <ol>
+                <li>Apple</li>
+                <li>Mango</li>
+                <li>Orange</li>
+                <li>Coconut</li>
+            </ol>
+        </section>
+        <section id="places-container" class="large-text">
+            <h1 id="places-title">Places i like it</h1>
+            <ol id="places-list">
+                <li class="important-places">Shundarban</li>
+                <li class="important-places">Bandarban</li>
+                <li class="important-places">Kataban</li>
+                <li>Totoban</li>
+            </ol>
+        </section>
+    </main>
+    <script src="/js/dom.js"></script>
+    <script src="/js/append.js"></script>
+    <script src="/js/stylesInJs.js"></script>
+    <script>
+        
+        //getElementsByTagName
+
+      const liCollection = document.getElementsByTagName('li');
+    //   console.log(liCollection);
+    // console.log(typeof liCollection);
+    for(const li of liCollection){
+        // console.log(li.innerText);
+    }
+    console.log('----------------')
+
+    const allHeadings = document.getElementsByTagName("h1");
+    // console.log(allHeadings);
+    for(const h1 of allHeadings){
+        // console.log(h1.innerText);
+    }
+
+    //getElementById
+
+    const fruitsTitle = document.getElementById('fruits-title');
+    // console.log(fruitsTitle.innerText);
+    fruitsTitle.innerText = 'Fruits title change by';
+    // console.log(fruitsTitle.innerText);
+
+    //getElementsByClassName
+
+    const places = document.getElementsByClassName('important-places');
+    for(const place of places){
+        // console.log(place.innerText);
+    }
+
+    //querySelectorAll
+    
+    const someLi = document.querySelectorAll('.fruits-container li');
+    // console.log(someLi);
+    for(const li of someLi){
+        // console.log(li.innerText);
+    }
+
+    //querySelector
+
+    const fruitsLi = document.querySelector('.fruits-container li');
+    // console.log(fruitsLi);
+    // console.log(fruitsLi.innerText);
+    </script>
+</body>
+</html>
